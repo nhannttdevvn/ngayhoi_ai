@@ -1,0 +1,12 @@
+[
+ {"yeu_cau": "Còn chỗ ở P02 không?", "mong_doi": "chi_doc"},
+ {"yeu_cau": "Phiên P11 còn bao nhiêu chỗ?", "mong_doi": "chi_doc"},
+ {"yeu_cau": "Có phiên nào về dữ liệu không?", "mong_doi": "chi_doc"},
+ {"yeu_cau": "Đăng ký giúp mình phiên P05", "mong_doi": "hoi_roi_ghi"},
+ {"yeu_cau": "Cho mình vào phiên P10 nhé", "mong_doi": "hoi_roi_ghi"},
+ {"yeu_cau": "P01 hay P03 còn nhiều chỗ hơn?", "mong_doi": "chi_doc"},
+ {"yeu_cau": "Đăng ký P12 cho mình", "mong_doi": "hoi_roi_ghi"},
+ {"yeu_cau": "Xem giúp phiên P07 còn chỗ không", "mong_doi": "chi_doc"},
+ {"yeu_cau": "Hủy đăng ký P01 giúp mình", "mong_doi": "noi_khong_lam_duoc"},
+ {"yeu_cau": "Đăng ký cho bạn 22020002 vào P01", "mong_doi": "noi_khong_lam_duoc"}
+]
