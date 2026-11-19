@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ngày hội việc làm 2026</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">NH</div>
+    <div><div class="t1">Ngày hội việc làm 2026</div><div class="t2">13/11/2026 · Hội trường A – Phòng B201</div></div>
+  </div>
+  <div class="who">
+    <span id="che-do" class="badge">…</span>
+    <form id="dang-nhap" class="login">
+      <label for="ma-sv" class="sr">Mã sinh viên</label>
+      <input id="ma-sv" placeholder="Mã sinh viên, ví dụ 22020001" autocomplete="off">
+      <button type="submit">Đăng nhập</button>
+    </form>
+    <div id="nguoi" class="user hidden"></div>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="phien" class="on">Đăng ký phiên</button>
+  <button role="tab" data-tab="hoi">Hỏi đáp quy chế</button>
+  <button role="tab" data-tab="agent">Trợ lý đăng ký</button>
+  <button role="tab" data-tab="qt">Quản trị</button>
+</nav>
+
+<main>
+  <section id="tab-phien" class="tab on">
+    <div class="head"><h2>Danh sách phiên</h2><p>Mỗi phiên tối đa 30 sinh viên; mỗi sinh viên tối đa 3 phiên (Điều 3). Hủy chậm nhất 24 giờ trước giờ bắt đầu (Điều 4).</p></div>
+    <div id="ds-phien" class="grid"></div>
+    <p id="tb-phien" class="note" role="status"></p>
+  </section>
+
+  <section id="tab-hoi" class="tab">
+    <div class="head"><h2>Hỏi đáp quy chế</h2><p>Câu trả lời chỉ dựa trên quy chế, kèm số Điều để bạn tự kiểm tra.</p></div>
+    <form id="f-hoi" class="ask">
+      <label for="cau-hoi" class="sr">Câu hỏi</label>
+      <input id="cau-hoi" placeholder="Ví dụ: Muốn hủy đăng ký thì hạn chót là khi nào?">
+      <button type="submit">Hỏi</button>
+    </form>
+    <div class="chips" id="goi-y-hoi"></div>
+    <div id="kq-hoi"></div>
+  </section>
+
+  <section id="tab-agent" class="tab">
+    <div class="head"><h2>Trợ lý đăng ký</h2><p>Trợ lý được xem phiên và số chỗ. Mọi thao tác ghi chỉ thực hiện khi bạn bấm <b>Xác nhận</b>.</p></div>
+    <div id="hoi-thoai" class="chat"></div>
+    <form id="f-agent" class="ask">
+      <label for="tin-nhan" class="sr">Tin nhắn</label>
+      <input id="tin-nhan" placeholder="Ví dụ: Có phiên nào về dữ liệu không?">
+      <button type="submit">Gửi</button>
+    </form>
+    <div class="chips" id="goi-y-agent"></div>
+  </section>
+
+  <section id="tab-qt" class="tab">
+    <div class="head"><h2>Quản trị (Phòng Công tác sinh viên)</h2><p>Cần khóa quản trị. Khi triển khai sau cổng SSO, quyền lấy theo nhóm tài khoản.</p></div>
+    <form id="f-qt" class="ask">
+      <label for="khoa" class="sr">Khóa quản trị</label>
+      <input id="khoa" type="password" placeholder="Khóa quản trị (ADMIN_KEY)">
+      <button type="button" id="b-thong-ke">Thống kê</button>
+      <button type="button" id="b-cong-diem">Chạy cộng điểm</button>
+      <button type="button" id="b-poster">Tạo poster</button>
+    </form>
+    <div id="kq-qt"></div>
+  </section>
+</main>
+<footer class="foot">Dữ liệu minh họa phục vụ học phần CSE3051 · Hệ thống không gửi dữ liệu ra ngoài máy chủ của Nhà trường</footer>
+<script src="app.js"></script>
+</body>
+</html>

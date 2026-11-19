@@ -1,0 +1,22 @@
+# Triển khai nội bộ: ứng dụng + Ollama trên cùng máy chủ của Nhà trường (dữ liệu không ra ngoài).
+# Lần đầu: docker compose up -d ; docker compose exec ollama ollama pull qwen2.5:3b ; ... ollama pull bge-m3
+services:
+  app:
+    build: .
+    env_file: .env
+    environment:
+      OLLAMA_URL: http://ollama:11434
+    volumes:
+      - du_lieu:/app/out
+    ports:
+      - "127.0.0.1:8000:8000"   # chỉ mở cho reverse proxy/SSO trên cùng máy
+    depends_on: [ollama]
+    restart: unless-stopped
+  ollama:
+    image: ollama/ollama:0.5.4
+    volumes:
+      - mo_hinh:/root/.ollama
+    restart: unless-stopped
+volumes:
+  du_lieu:
+  mo_hinh:
